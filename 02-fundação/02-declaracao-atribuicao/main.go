@@ -11,6 +11,6 @@ var (
 
 func main() {
 	a := "X" //var a string
-	a = "Z"  //sem : quando for reatribuir, := só na primeiravez
+	a = "Z"  //sem : quando for reatribuir, := só na primeira vez
 	println(a)
 }
