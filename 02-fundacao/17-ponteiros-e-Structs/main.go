@@ -1,21 +1,21 @@
 package main
 
-import "fmt"
-
-type Cliente struct {
-	nome string
+type Conta struct {
+	saldo int
 }
 
-func (c Cliente) andou() {
-	c.nome = "Wesley Willinas"
-	fmt.Printf("O cliente %v andou\n", c.nome)
+func NewConta() *Conta{
+	return &Conta{saldo:0}
+}
+
+func (c *Conta) simular(valor int) int {
+	c.saldo += valor
+	println(c.saldo)
+	return c.saldo
 }
 
 func main() {
-	wesley := Cliente{
-		nome: "Wesley",
-	}
-
-	wesley.andou()
-	fmt.Printf("O valor da struct com nome %v\n", wesley.nome)
+	conta := Conta{saldo:100}
+	conta.simular(200)
+	println(conta.saldo)
 }
