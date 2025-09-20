@@ -1,4 +1,4 @@
-module 02-fundacao
+module curso-go
 
 go 1.24.4
 
